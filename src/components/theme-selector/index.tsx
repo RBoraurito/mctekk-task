@@ -18,6 +18,7 @@ export function ThemeSelector({ setTheme, theme: currentTheme, children }: Theme
       <div className="flex gap-2">
         {THEMES.map((theme) => (
           <button
+            key={theme}
             onClick={() => setTheme(theme)}
             className={clsx(
               'rounded-lg border border-slate-50 px-3 py-1 hover:bg-slate-50 hover:text-slate-900',
