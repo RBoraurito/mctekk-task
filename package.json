@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "format": "prettier . --write"
   },
   "dependencies": {
     "@uiw/react-textarea-code-editor": "^3.0.2",

@@ -1,0 +1,4 @@
+/node_modules
+/.next
+/.husky
+next-env.d.ts
