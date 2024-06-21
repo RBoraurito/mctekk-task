@@ -1,5 +1,6 @@
 'use client';
 
+import CodeEditor from '@uiw/react-textarea-code-editor';
 import { marked } from 'marked';
 import { CSSProperties, useState } from 'react';
 import { THEMES, ThemeSelector } from '../theme-selector';
@@ -28,14 +29,17 @@ export function Editor() {
     <section className="">
       <div className="mx-auto grid h-[80vh] max-w-6xl px-4 lg:grid-cols-2 lg:px-8">
         <div className="border border-slate-100 overflow-auto">
-          <textarea
-            name="markdown"
-            id="markdown"
-            onChange={(e) => setMarkdown(e.target.value)}
-            className="m-0 h-full w-full p-3"
-          >
-            {markdown}
-          </textarea>
+          <CodeEditor
+            value={markdown}
+            language="md"
+            placeholder="Please enter write your markdown"
+            onChange={(evn) => setMarkdown(evn.target.value)}
+            padding={15}
+            style={{
+              fontSize: "18px"
+            }}
+            className="m-0 h-full w-full p-3 text-lg"
+          />
         </div>
         <div className="flex flex-col border border-slate-100 text-slate-50 overflow-auto">
           <ThemeSelector theme={theme} setTheme={setTheme}>
