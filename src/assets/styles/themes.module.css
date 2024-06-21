@@ -1,0 +1,161 @@
+/* Themes.module.css */
+
+/* Base styles */
+.container {
+  font-size: var(--text-base, 16px);
+  @apply grow p-4 transition-colors duration-300;
+}
+
+/* Light theme */
+.light {
+  @apply bg-white text-black;
+}
+
+.light h1,
+.light h2,
+.light h3,
+.light h4,
+.light h5,
+.light h6 {
+  @apply text-gray-800;
+}
+
+.light a {
+  @apply text-blue-500;
+}
+
+.light a:hover {
+  @apply text-blue-700;
+}
+
+/* Dark theme */
+.dark {
+  @apply bg-gray-900 text-white;
+}
+
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6 {
+  @apply text-gray-300;
+}
+
+.dark a {
+  @apply text-blue-300;
+}
+
+.dark a:hover {
+  @apply text-blue-500;
+}
+
+/* Party theme */
+.party {
+  @apply bg-pink-500 text-white;
+}
+
+.party h1,
+.party h2,
+.party h3,
+.party h4,
+.party h5,
+.party h6 {
+  @apply text-yellow-300;
+}
+
+.party a {
+  @apply text-green-300;
+}
+
+.party a:hover {
+  @apply text-green-500;
+}
+
+/* Shared styles for markdown elements */
+.container h1 {
+  font-size: 2.25em;
+  line-height: 2.5em;
+  @apply my-4 font-bold;
+}
+
+.container h2 {
+  font-size: 1.875em;
+  line-height: 2.25em;
+  @apply my-4 font-bold;
+}
+
+.container h3 {
+  font-size: 1.5em;
+  line-height: 2em;
+  @apply my-4 font-bold;
+}
+
+.container h4 {
+  font-size: 1.25em;
+  line-height: 1.75em;
+  @apply my-4 font-bold;
+}
+
+.container h5 {
+  font-size: 1.125em;
+  line-height: 1.75em;
+  @apply my-4 font-bold;
+}
+
+.container h6 {
+  font-size: 1em;
+  line-height: 1.5em;
+  @apply my-4 text-base font-bold;
+}
+
+.container * {
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+.container p {
+  @apply my-2;
+}
+
+.container a {
+  @apply no-underline;
+}
+
+.container ul,
+.container ol {
+  @apply my-2 pl-6;
+}
+
+.container li {
+  @apply list-inside list-disc;
+}
+
+.container blockquote {
+  @apply border-l-4 pl-4 italic;
+}
+
+.container code {
+  @apply rounded bg-gray-100 p-1 text-red-500;
+}
+
+.container pre code {
+  @apply block rounded bg-gray-100 p-4;
+}
+
+.container hr {
+  @apply my-4 border-t-2;
+}
+
+.container table {
+  @apply my-4 w-full table-auto;
+}
+
+.container th,
+.container td {
+  @apply border px-4 py-2;
+}
+
+.container th {
+  @apply bg-gray-100;
+}
