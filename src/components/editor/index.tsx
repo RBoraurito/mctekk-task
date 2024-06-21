@@ -13,8 +13,8 @@ export function Editor() {
   const [size, setSize] = useState(16);
 
   return (
-    <section className="mx-auto grid min-h-96 max-w-6xl px-4 lg:grid-cols-2 lg:px-8">
-      <div className="border border-slate-100">
+    <section className="mx-auto grid h-[80vh] max-w-6xl px-4 lg:grid-cols-2 lg:px-8">
+      <div className="border border-slate-100 overflow-auto">
         <textarea
           name="markdown"
           id="markdown"
@@ -24,7 +24,7 @@ export function Editor() {
           {markdown}
         </textarea>
       </div>
-      <div className="flex flex-col border border-slate-100 text-slate-50">
+      <div className="flex flex-col border border-slate-100 text-slate-50 overflow-auto">
         <ThemeSelector theme={theme} setTheme={setTheme}>
           <Controls size={size} setSize={setSize} />
         </ThemeSelector>
